@@ -17,7 +17,7 @@ models:
         tests:
           - not_null
 models:
-  - name: top_category_sales
+  - name: dm_top_category_sales
     description: "Top category product sales by month"
     columns:
       - name: category_name
@@ -33,7 +33,7 @@ models:
         tests:
           - not_null
 models:
-  - name: top_employee_revenue
+  - name: dm_top_employee_revenue
     description: "Top employee revenue by month"
     columns:
       - name: employee_name
