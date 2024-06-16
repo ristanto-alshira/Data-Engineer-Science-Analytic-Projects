@@ -1,5 +1,5 @@
 # project dbt
-## Make a OLTP:
+## Make an OLTP:
 1. make database at postgres named northwind
 dbase name: northwind
 host : localhost
