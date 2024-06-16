@@ -1,8 +1,20 @@
-# learn_dbt
+# project dbt
+## Make a OLTP:
+1. make database at postgres named northwind
+dbase name: northwind
+host : localhost
+user : postgres
+type : postgres
+passw : 12345678
+port : 5432
 
+2. locate csv folder at C:/User/user/project_2
+3. Upload the csv data to database postgres, run the python file at init_db:
+```
+init.py
+```
 
-
-## How to run it?
+### How to run dbt?
 
 create a virtual env of python first :
 ```

@@ -6,19 +6,19 @@ WITH order_details AS (
         "QUANTITY",
         "DISCOUNT",
         ("UNITPRICE" * (1 - "DISCOUNT") * "QUANTITY") AS gross_revenue
-    FROM {{ ref('raw_order_details') }}
+    FROM "northwind"."public"."raw_order_details"
 ),
 orders AS (
     SELECT
         "ORDERID",
         "SHIPPEDDATE"
-    FROM {{ ref('raw_orders') }}
+    FROM "northwind"."public"."raw_orders"
 ),
 products AS (
     SELECT
         "PRODUCTID",
         "SUPPLIERID"
-    FROM {{ ref('raw_products') }}
+    FROM "northwind"."public"."raw_products"
 )
 SELECT
     s."COMPANYNAME",
@@ -27,6 +27,6 @@ SELECT
 FROM order_details od
 JOIN orders o ON od."ORDERID" = o."ORDERID"
 JOIN products p ON od."PRODUCTID" = p."PRODUCTID"
-JOIN {{ ref('raw_suppliers') }} s ON p."SUPPLIERID" = s."SUPPLIERID"
+JOIN "northwind"."public"."raw_suppliers" s ON p."SUPPLIERID" = s."SUPPLIERID"
 GROUP BY s."COMPANYNAME", TO_CHAR(DATE_TRUNC('month', o."SHIPPEDDATE"), 'YYYY-MM')
 ORDER BY month DESC

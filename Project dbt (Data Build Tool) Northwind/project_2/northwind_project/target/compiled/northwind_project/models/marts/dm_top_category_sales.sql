@@ -3,25 +3,25 @@ WITH order_details AS (
         "ORDERID",
         "PRODUCTID",
         "QUANTITY"
-    FROM {{ ref('raw_order_details') }}
+    FROM "northwind"."public"."raw_order_details"
 ),
 orders AS (
     SELECT
         "ORDERID",
         "SHIPPEDDATE"
-    FROM {{ ref('raw_orders') }}
+    FROM "northwind"."public"."raw_orders"
 ),
 products AS (
     SELECT
         "PRODUCTID",
         "CATEGORYID"
-    FROM {{ ref('raw_products') }}
+    FROM "northwind"."public"."raw_products"
 ),
 categories AS (
     SELECT
         "CATEGORYID",
         "CATEGORYNAME"
-    FROM {{ ref('raw_categories') }}
+    FROM "northwind"."public"."raw_categories"
 ),
 category_sales AS (
     SELECT
