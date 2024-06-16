@@ -18,8 +18,8 @@ init.py
 
 create a virtual env of python first :
 ```
-python3 -m venv /Users/lip13farhanpratama/venv_dskola
-source /Users/lip13farhanpratama/venv_dskola/bin/activate
+py -m venv /Users/user/venv_dskola
+venv_dskola/scripts/activate
 ```
 1. build the postgres image
 ```
