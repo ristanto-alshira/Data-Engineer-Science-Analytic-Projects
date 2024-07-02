@@ -1,0 +1,3 @@
+Alamat sharing sakila metabase dashboard:
+
+http://localhost:3000/public/dashboard/5eeb48c4-a8af-44b1-93e2-a9311fffd267
